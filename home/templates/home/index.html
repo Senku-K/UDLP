@@ -1,0 +1,17 @@
+{% extends "home/base.html" %}
+
+{% block content %}
+<h1>DATA LEAK PROFILES</h1>
+<div class="user-list">
+    <ul style="list-style: none; padding: 0;">
+        {% for name, file in users.items %}
+            <li>
+                <strong>{{ name }}</strong>
+                <a href="{% url 'user_profile' filename=file %}" class="view-profile-btn">
+                    > Access Profile
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %} 

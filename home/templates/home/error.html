@@ -1,0 +1,11 @@
+{% extends "home/base.html" %}
+
+{% block content %}
+<div style="text-align: center;">
+    <h1 style="color: #dc3545;">Error</h1>
+    <p>{{ message }}</p>
+    <a href="{% url 'home' %}" style="display: inline-block; padding: 8px 16px; background-color: #6c757d; color: white; border-radius: 4px; text-decoration: none;">
+        ← Back to Home
+    </a>
+</div>
+{% endblock %} 
